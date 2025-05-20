@@ -75,19 +75,11 @@ indian_personalities = {
     }
 }
 
-# Define languages supported by Sutra
+# Define languages supported by Sutra (only Indian languages as specified)
 languages = [
     "English", "Hindi", "Gujarati", "Bengali", "Tamil", 
     "Telugu", "Kannada", "Malayalam", "Punjabi", "Marathi", 
-    "Urdu", "Assamese", "Odia", "Sanskrit", "Korean", 
-    "Japanese", "Arabic", "French", "German", "Spanish", 
-    "Portuguese", "Russian", "Chinese", "Vietnamese", "Thai", 
-    "Indonesian", "Turkish", "Polish", "Ukrainian", "Dutch", 
-    "Italian", "Greek", "Hebrew", "Persian", "Swedish", 
-    "Norwegian", "Danish", "Finnish", "Czech", "Hungarian", 
-    "Romanian", "Bulgarian", "Croatian", "Serbian", "Slovak", 
-    "Slovenian", "Estonian", "Latvian", "Lithuanian", "Malay", 
-    "Tagalog", "Swahili"
+    "Urdu", "Assamese", "Odia", "Sanskrit"
 ]
 
 # Conversation topics
@@ -149,7 +141,12 @@ with st.sidebar:
     conversation_rounds = st.slider("Conversation rounds:", min_value=1, max_value=5, value=3)
     
     # Conversation topic selection
-    selected_topic = st.selectbox("Select conversation topic:", conversation_topics)
+    topic_selection = st.radio("Topic selection:", ["Choose from list", "Custom topic"])
+    
+    if topic_selection == "Choose from list":
+        selected_topic = st.selectbox("Select conversation topic:", conversation_topics)
+    else:
+        selected_topic = st.text_input("Enter custom conversation topic:", placeholder="Type your own topic here")
     
     st.divider()
     
