@@ -1,6 +1,6 @@
 # Indian Personalities Conversation Simulator
 
-![Banner](https://framerusercontent.com/images/3Ca34Pogzn9I3a7uTsNSlfs9Bdk.png)
+![Banner](https://framerusercontent.com/images/9vH8BcjXKRcC5OrSfkohhSyDgX0.png)
 
 ## 🇮🇳 Overview
 
